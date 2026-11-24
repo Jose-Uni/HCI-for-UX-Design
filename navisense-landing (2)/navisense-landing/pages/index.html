@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es" data-contraste="normal" data-texto="normal">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NaviSense – Caminar con más seguridad y autonomía</title>
+  <meta name="description" content="NaviSense avisa por audio y vibración de los obstáculos del camino, y permite a un familiar acompañar el trayecto.">
+  <link rel="icon" href="../favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><symbol id="i-logo" viewBox="0 0 24 24"><path d="M12 3 4.5 20.5 12 16.5l7.5 4z"/></symbol><symbol id="i-alerta" viewBox="0 0 24 24"><path d="M12 3.5 2.8 20h18.4L12 3.5z"/><path d="M12 10v4.5M12 17.5v.01"/></symbol><symbol id="i-bache" viewBox="0 0 24 24"><ellipse cx="12" cy="8" rx="8" ry="3.5"/><path d="M4 8v6c0 2 3.6 3.5 8 3.5s8-1.5 8-3.5V8"/></symbol><symbol id="i-peaton" viewBox="0 0 24 24"><circle cx="13" cy="4.5" r="2"/><path d="M11 21l2-6-3-3 1.5-4.5L16 10l2 2M13 15l3 2v4"/></symbol><symbol id="i-cruce" viewBox="0 0 24 24"><path d="M7 20 9 4M17 20 15 4M12 5v3M12 11v3M12 17v3"/></symbol><symbol id="i-semaforo" viewBox="0 0 24 24"><rect x="8" y="2.5" width="8" height="19" rx="3"/><circle cx="12" cy="8" r="1.4"/><circle cx="12" cy="12.5" r="1.4"/><circle cx="12" cy="17" r="1.4"/></symbol><symbol id="i-obras" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="6" rx="1.5"/><path d="M6 14v6M18 14v6M8 8l-2 6M13 8l-2 6M18 8l-2 6"/></symbol><symbol id="i-auto" viewBox="0 0 24 24"><path d="M4 17v-5l2-5h12l2 5v5zM4 12h16"/><circle cx="8" cy="17" r="1.6"/><circle cx="16" cy="17" r="1.6"/></symbol><symbol id="i-tren" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="14" rx="3"/><path d="M5 11h14M8 21l2-4M16 21l-2-4"/></symbol><symbol id="i-anden" viewBox="0 0 24 24"><path d="M3 17h18M6 17V9M18 17V9M9 9h6M3 21h18"/></symbol><symbol id="i-sos" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><text x="12" y="15" font-size="7.5" font-weight="700" text-anchor="middle" fill="currentColor" stroke="none">SOS</text></symbol><symbol id="i-bateria" viewBox="0 0 24 24"><rect x="3" y="7" width="16" height="10" rx="2"/><path d="M21 10v4M6.5 10v4M10 10v4"/></symbol><symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol><symbol id="i-casa" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7M5 10v10h14V10M10 20v-6h4v6"/></symbol><symbol id="i-escudo" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></symbol><symbol id="i-usuario" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></symbol><symbol id="i-usuarios" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.7-3.5 3-5 6.5-5s5.8 1.5 6.5 5M16 4.7a3.5 3.5 0 0 1 0 6.6M18 15c2 .6 3.2 2.3 3.5 5"/></symbol><symbol id="i-telefono" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol><symbol id="i-movil" viewBox="0 0 24 24"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></symbol><symbol id="i-campana" viewBox="0 0 24 24"><path d="M6 17v-6a6 6 0 0 1 12 0v6l2 2H4l2-2zM10 21.5h4"/></symbol><symbol id="i-engranaje" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1"/></symbol><symbol id="i-nube" viewBox="0 0 24 24"><path d="M7 18a4.5 4.5 0 0 1-.5-9A6 6 0 0 1 18 10a4 4 0 0 1 0 8H7z"/><path d="M9 13.5l2 2 4-4"/></symbol><symbol id="i-brujula" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5 5-2z"/></symbol><symbol id="i-ojo" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol><symbol id="i-correo" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7.5 12 14l8.5-6.5"/></symbol><symbol id="i-candado" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></symbol><symbol id="i-ayuda" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.4-1 .9-1 1.7M12 17v.01"/></symbol><symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.01"/></symbol><symbol id="i-resumen" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="7" height="7" rx="1.8"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.8"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.8"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.8"/></symbol><symbol id="i-audifonos" viewBox="0 0 24 24"><path d="M4 15v-3a8 8 0 0 1 16 0v3"/><rect x="3" y="14" width="4" height="7" rx="1.8"/><rect x="17" y="14" width="4" height="7" rx="1.8"/></symbol></defs></svg>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<header class="cabecera">
+  <div class="contenedor">
+    <a class="marca" href="#inicio"><span class="marca-icono" aria-hidden="true"><svg class="ic" aria-hidden="true"><use href="#i-logo"/></svg></span> NaviSense</a>
+    <button class="btn btn-secundario nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav">Menú</button>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <ul>
+        <li><a href="#como-funciona">Alertas</a></li>
+        <li><a href="#audio">Audio y SOS</a></li>
+        <li><a href="#accesibilidad">Accesibilidad</a></li>
+        <li><a href="#panel">Panel del cuidador</a></li>
+        <li><a href="#privacidad">Privacidad</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div id="anuncios" class="solo-lectores" role="status" aria-live="polite"></div>
+
+<main id="contenido">
+<section class="hero" id="inicio" aria-labelledby="t-hero">
+  <div class="contenedor hero-grid">
+    <div>
+      <h1 id="t-hero">Camina con más seguridad, sin pedir ayuda a cada paso</h1>
+      <p>NaviSense usa la cámara del celular para avisarte por sonido y vibración de postes, baches, cruces y obras antes de llegar a ellos. Tu familia puede acompañar el trayecto desde un panel, con tu permiso.</p>
+      <div class="acciones">
+        <a class="btn btn-principal" href="#como-funciona">Probar las alertas</a>
+        <a class="btn btn-secundario" href="#panel">Ver el panel del cuidador</a>
+      </div>
+    </div>
+    <div class="telefono" aria-label="Vista previa de la app">
+      <div class="pantalla">
+        <p class="apoyo" style="margin:0">Navegando · Calle Mayor 18</p>
+        <div id="tel-alerta" class="alerta alerta-exito"><span class="icono" aria-hidden="true"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></span><div><strong>Camino libre</strong><span class="apoyo">Prueba una alerta abajo</span></div></div>
+        <p class="apoyo" style="margin:0">La pantalla muestra lo mismo que escuchas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="seccion" id="como-funciona" aria-labelledby="t-alertas" data-hu="HU-09 HU-10 HU-11 HU-12 HU-13 HU-16 HU-17 HU-36 HU-37">
+  <div class="contenedor">
+    <h2 id="t-alertas">Prueba cómo suena una alerta</h2>
+    <p>Elige una situación. Verás el aviso, escucharás el mensaje y, en el celular, sentirás la vibración. Cada alerta usa tres señales a la vez: pantalla, sonido y vibración.</p>
+    <div class="grid grid-3" id="escenarios"></div>
+    <div id="alerta-activa" class="alerta alerta-info" style="margin-top:var(--s3)" hidden></div>
+  </div>
+</section>
+
+<section class="seccion" id="audio" aria-labelledby="t-audio" data-hu="HU-19 HU-24">
+  <div class="contenedor grid">
+    <div>
+      <h2 id="t-audio">Audio que indica la dirección</h2>
+      <p>Usa audífonos. El sonido llega por la izquierda o la derecha, según dónde esté el obstáculo.</p>
+      <div class="radar" aria-hidden="true"><svg class="ic radar-ic" aria-hidden="true"><use href="#i-audifonos"/></svg><span class="punto" id="punto"></span></div>
+      <div class="campo">
+        <label for="dir">Dirección del obstáculo</label>
+        <input type="range" id="dir" min="-1" max="1" step="0.1" value="-0.8" aria-describedby="dir-txt">
+        <span class="apoyo" id="dir-txt"></span>
+      </div>
+      <div class="fila" role="group" aria-label="Direcciones rápidas">
+        <button class="btn btn-secundario" data-dir="-0.8">Izquierda</button>
+        <button class="btn btn-secundario" data-dir="0">Al frente</button>
+        <button class="btn btn-secundario" data-dir="0.8">Derecha</button>
+      </div>
+      <div class="campo" style="margin-top:var(--s3)">
+        <label for="volumen">Volumen del audio espacial: <span id="vol-txt">70 %</span></label>
+        <input type="range" id="volumen" min="0" max="100" step="5" value="70">
+      </div>
+      <button class="btn btn-principal" id="btn-dir">Escuchar el aviso</button>
+    </div>
+    <div class="tarjeta">
+      <h3>Botón de emergencia</h3>
+      <p>Mantén pulsado 1,5 segundos para enviar tu ubicación a tu contacto de confianza. Evita toques accidentales.</p>
+      <div class="sos-caja"><span class="sos-barra" id="sos-barra"></span>
+        <button class="btn btn-panico" id="btn-sos" aria-describedby="sos-ayuda">SOS · mantén pulsado</button></div>
+      <p class="apoyo" id="sos-ayuda" style="margin-top:var(--s1)">Con teclado, mantén Espacio o Enter.</p>
+      <button class="btn btn-secundario" id="btn-sos-alt">Enviar SOS con un solo toque</button>
+      <p class="msg" id="msg-sos-demo"></p>
+    </div>
+  </div>
+</section>
+
+<section class="seccion" id="accesibilidad" aria-labelledby="t-acc" data-hu="HU-02 HU-26 HU-27 HU-29">
+  <div class="contenedor grid">
+    <div>
+      <h2 id="t-acc">La app se adapta a ti</h2>
+      <p>Elige tu perfil y NaviSense ajusta contraste, tamaño de texto y voz. Puedes cambiar cada cosa después.</p>
+      <div class="campo"><label for="perfil">Tu perfil visual</label>
+        <select id="perfil"><option value="">Elige una opción</option><option value="ciego">Ceguera total</option><option value="baja">Baja visión moderada</option><option value="leve">Baja visión leve</option></select></div>
+      <p class="msg" id="msg-perfil"></p>
+      <div class="interruptor"><label for="contraste">Alto contraste</label><input type="checkbox" id="contraste" role="switch" data-switch></div>
+      <fieldset><legend>Tamaño del texto</legend><div class="opciones">
+        <label><input type="radio" name="texto" value="normal" checked> Normal</label>
+        <label><input type="radio" name="texto" value="grande"> Grande</label>
+        <label><input type="radio" name="texto" value="muy-grande"> Muy grande</label></div></fieldset>
+    </div>
+    <div>
+      <div class="tarjeta" style="margin-bottom:var(--s3)">
+        <h3>Voz y vibración</h3>
+        <div class="interruptor"><label for="voz-on">Voz activada</label><input type="checkbox" id="voz-on" role="switch" checked data-switch></div>
+        <div class="interruptor"><label for="sonido">Tonos activados</label><input type="checkbox" id="sonido" role="switch" checked data-switch></div>
+        <div class="campo"><label for="rate">Velocidad de la voz: <span id="rate-txt">1.0×</span></label>
+          <div class="fila"><button class="btn btn-secundario" data-rate="-0.1" aria-label="Voz más lenta">−</button>
+          <input type="range" id="rate" min="0.6" max="1.6" step="0.1" value="1" style="flex:1;min-width:120px"><button class="btn btn-secundario" data-rate="0.1" aria-label="Voz más rápida">+</button></div></div>
+        <div class="campo"><label for="haptica">Intensidad de la vibración</label>
+          <select id="haptica"><option value="0.5">Suave</option><option value="1" selected>Media</option><option value="1.5">Fuerte</option></select></div>
+        <div class="fila"><button class="btn btn-secundario" id="probar-voz">Probar voz</button><button class="btn btn-secundario" id="probar-vib">Probar vibración</button></div>
+      </div>
+      <div class="tarjeta">
+        <h3>Lugares frecuentes</h3>
+        <form id="form-lugar" novalidate class="fila" style="align-items:flex-start">
+          <div class="campo" style="flex:1;min-width:160px;margin:0"><label for="lugar">Nombre del lugar</label><input id="lugar" maxlength="40" autocomplete="off"></div>
+          <button class="btn btn-principal" style="margin-top:32px" type="submit">Guardar lugar</button>
+        </form>
+        <p class="msg" id="msg-lugar" role="status"></p>
+        <ul class="lista" id="lista-lugares"></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="seccion tema-claro" id="panel" aria-labelledby="t-panel" style="background:var(--superficie-1);color:var(--texto)"
+  data-hu="HU-03 HU-04 HU-05 HU-06 HU-08 HU-22 HU-23 HU-31 HU-32 HU-33 HU-34 HU-35 HU-46 HU-47 HU-48">
+  <div class="contenedor">
+    <h2 id="t-panel">Panel del cuidador</h2>
+    <p>Acompaña el trayecto de tu familiar con su permiso. Para probarlo usa cualquier correo válido y una contraseña de 6 o más caracteres.</p>
+    <div class="app">
+      <div class="app-top">
+        <span class="marca"><span class="marca-icono" aria-hidden="true"><svg class="ic" aria-hidden="true"><use href="#i-logo"/></svg></span> NaviSense <span class="apoyo">/ Panel cuidador</span></span>
+        <span class="app-acciones">
+          <button class="btn btn-secundario" id="btn-ayuda"><svg class="ic" aria-hidden="true"><use href="#i-ayuda"/></svg> Ayuda de acceso</button>
+          <span id="top-user" hidden>María López · Acompañante</span>
+          <button class="btn btn-secundario" id="btn-salir" hidden>Cerrar sesión</button>
+        </span>
+      </div>
+
+      <div id="login-vista" class="login">
+        <div class="login-info">
+          <div class="ilustracion" role="img" aria-label="Ilustración de una calle con cruce peatonal">
+            <svg viewBox="0 0 400 150" preserveAspectRatio="xMidYMid slice"><rect width="400" height="150" fill="#1C2438"/><rect y="95" width="400" height="55" fill="#121826"/><path d="M0 122h400" stroke="#8394B5" stroke-width="2" stroke-dasharray="18 14"/><g fill="#2EC4E6"><rect x="60" y="30" width="40" height="65"/><rect x="110" y="50" width="50" height="45"/><rect x="250" y="20" width="45" height="75"/><rect x="305" y="55" width="55" height="40"/></g><g fill="#0A0E17"><rect x="68" y="40" width="8" height="8"/><rect x="84" y="40" width="8" height="8"/><rect x="260" y="30" width="8" height="8"/><rect x="276" y="30" width="8" height="8"/></g><circle cx="205" cy="120" r="9" fill="#FFD60A"/></svg>
+          </div>
+          <h3>Acompaña con confianza</h3>
+          <p>Accede al panel para coordinar cuidados, revisar alertas y acompañar a tu persona vinculada desde un entorno claro y seguro.</p>
+          <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr))">
+            <div class="mini"><svg class="ic" aria-hidden="true"><use href="#i-escudo"/></svg><strong>Privacidad</strong><span class="apoyo">Tus datos y los de tu persona vinculada están protegidos.</span></div>
+            <div class="mini"><svg class="ic" aria-hidden="true"><use href="#i-movil"/></svg><strong>Acceso rápido</strong><span class="apoyo">Inicia sesión desde cualquier dispositivo.</span></div>
+          </div>
+        </div>
+        <div class="tarjeta login-form">
+          <p class="apoyo" style="margin:0">Acceso · Acompañante</p>
+          <h3>Iniciar sesión</h3>
+          <p class="apoyo">Accede para acompañar a tu persona vinculada.</p>
+          <form id="form-login" novalidate>
+            <div class="campo"><label for="email">Correo electrónico</label>
+              <div class="entrada"><svg class="ic" aria-hidden="true"><use href="#i-correo"/></svg><input id="email" type="email" autocomplete="email" placeholder="maria@correo.com" aria-describedby="e-email"></div>
+              <span class="error" id="e-email">Escribe un correo válido, por ejemplo maria@correo.com.</span></div>
+            <div class="campo"><label for="clave">Contraseña</label>
+              <div class="entrada"><svg class="ic" aria-hidden="true"><use href="#i-candado"/></svg><input id="clave" type="password" autocomplete="current-password" aria-describedby="e-clave">
+                <button type="button" class="ojo" id="ver-clave" aria-label="Mostrar contraseña" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-ojo"/></svg></button></div>
+              <span class="error" id="e-clave">La contraseña debe tener al menos 6 caracteres.</span></div>
+            <div class="fila" style="justify-content:space-between;margin-bottom:var(--s2)">
+              <label class="opciones"><input type="checkbox" id="recordar" checked> Recordar sesión</label>
+              <a href="#panel" id="olvide">¿Olvidaste tu contraseña?</a></div>
+            <button class="btn btn-principal" type="submit" style="width:100%">Acceder al panel</button>
+          </form>
+          <p class="msg" id="msg-login" role="status"></p>
+          <p class="apoyo"><svg class="ic" aria-hidden="true"><use href="#i-candado"/></svg> Tus datos y los de tu persona vinculada están protegidos.</p>
+        </div>
+      </div>
+
+      <div id="panel-vista" class="app-body" hidden>
+        <aside class="app-side">
+          <p class="apoyo" style="margin:0 0 var(--s1)">Acompañamiento</p>
+          <div class="tabs" role="tablist" aria-orientation="vertical" aria-label="Secciones del panel"><button class="tab" role="tab" id="tab-resumen" aria-selected="true" aria-controls="p-resumen"><svg class="ic" aria-hidden="true"><use href="#i-resumen"/></svg><span>Resumen</span></button><button class="tab" role="tab" id="tab-alertas" aria-selected="false" tabindex="-1" aria-controls="p-alertas"><svg class="ic" aria-hidden="true"><use href="#i-campana"/></svg><span>Alertas y geocerca</span></button><button class="tab" role="tab" id="tab-personas" aria-selected="false" tabindex="-1" aria-controls="p-personas"><svg class="ic" aria-hidden="true"><use href="#i-usuarios"/></svg><span>Personas vinculadas</span></button><button class="tab" role="tab" id="tab-config" aria-selected="false" tabindex="-1" aria-controls="p-config"><svg class="ic" aria-hidden="true"><use href="#i-engranaje"/></svg><span>Configuración</span></button></div>
+          <div class="side-user"><strong>Carlos López</strong><span class="apoyo">Conectado · hace 5 s</span></div>
+          <p class="apoyo" style="margin:var(--s2) 0 0"><svg class="ic" aria-hidden="true"><use href="#i-candado"/></svg> Sesión protegida</p>
+        </aside>
+        <div class="app-main">
+          <div id="banner-sos" role="alert"></div>
+          <div role="tabpanel" id="p-resumen" aria-labelledby="tab-resumen">
+        <h3 id="t-panel-sesion" tabindex="-1" style="margin-bottom:4px">Resumen de acompañamiento</h3>
+        <p class="apoyo">Carlos López · Seguimiento en tiempo real</p>
+        <div class="stats">
+          <div class="stat"><span class="apoyo"><svg class="ic" aria-hidden="true"><use href="#i-peaton"/></svg> Estado actual</span><strong>En tránsito</strong></div>
+          <div class="stat"><span class="apoyo"><svg class="ic" aria-hidden="true"><use href="#i-bateria"/></svg> Batería del dispositivo</span><strong id="bat">85%</strong><span class="chip chip-exito" id="bat-chip"></span></div>
+          <div class="stat"><span class="apoyo"><svg class="ic" aria-hidden="true"><use href="#i-brujula"/></svg> Conexión GPS</span><strong>Señal estable</strong></div>
+        </div>
+        <div class="resumen-grid">
+          <div class="tarjeta"><h3>Ubicación en vivo</h3>
+            <div class="mapa" role="img" aria-label="Mapa simulado con la ubicación de Carlos"><span class="casa" aria-hidden="true"><svg class="ic" aria-hidden="true"><use href="#i-casa"/></svg></span><span class="pin" id="pin" aria-hidden="true"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg></span></div>
+            <div class="interruptor" style="margin-top:var(--s2)"><label for="compartir">Compartir ubicación</label><span><span class="est"></span> <input type="checkbox" id="compartir" role="switch" checked data-switch></span></div>
+            <p class="apoyo" id="estado-ubic"></p>
+            <button class="btn btn-secundario" id="btn-actualizar">Actualizar estado</button></div>
+          <div class="tarjeta"><h3>Eventos recientes</h3><ul class="lista" id="lista-eventos"></ul></div>
+        </div>
+      </div>
+
+      <!-- Alertas y geocerca: HU-32, HU-33, HU-34, HU-35 -->
+      <div role="tabpanel" id="p-alertas" aria-labelledby="tab-alertas" hidden>
+        <div class="grid-panel">
+          <div class="tarjeta"><h3>Notificaciones de pánico</h3><div id="sos-card"></div><p class="msg" id="msg-sos" role="status"></p></div>
+          <div class="tarjeta"><h3>Perímetro seguro</h3>
+            <div class="mapa" role="img" aria-label="Mapa simulado del perímetro seguro" style="height:180px"><span class="geo" id="geo-circulo"></span><span class="casa" aria-hidden="true"><svg class="ic" aria-hidden="true"><use href="#i-casa"/></svg></span></div>
+            <div class="campo" style="margin-top:var(--s2)"><label for="radio">Radio: <span id="radio-txt">500 m</span></label>
+              <input type="range" id="radio" min="100" max="2000" step="50" value="500"></div>
+            <div class="campo"><label for="radio-n">Radio en metros (100 a 2000)</label><input id="radio-n" type="number" min="100" max="2000" step="50" value="500"></div>
+            <div class="fila"><button class="btn btn-principal" id="guardar-geo">Guardar perímetro</button><button class="btn btn-secundario" id="simular-salida">Simular salida</button></div>
+            <p class="msg" id="msg-geo" role="status"></p></div>
+        </div>
+        <div class="tarjeta" style="margin-top:var(--s3)"><h3>Historial de alertas</h3>
+          <div class="fila" role="group" aria-label="Filtrar por tipo" style="margin-bottom:var(--s2)">
+            <button class="btn btn-secundario" data-filtro="todos" aria-pressed="true">Todos</button>
+            <button class="btn btn-secundario" data-filtro="panico" aria-pressed="false">Pánico</button>
+            <button class="btn btn-secundario" data-filtro="perimetro" aria-pressed="false">Perímetro</button>
+            <button class="btn btn-secundario" data-filtro="obstaculo" aria-pressed="false">Obstáculos</button></div>
+          <ul class="lista" id="lista-historial"></ul></div>
+        <form class="tarjeta" id="form-notif" novalidate style="margin-top:var(--s3)"><fieldset style="border:0;padding:0;margin:0"><legend>¿Cómo quieres recibir los avisos?</legend>
+          <div class="opciones"><label><input type="checkbox" name="canal" checked> Notificación push</label><label><input type="checkbox" name="canal"> Mensaje de texto</label><label><input type="checkbox" name="canal"> Correo</label></div></fieldset>
+          <button class="btn btn-secundario" type="submit" style="margin-top:var(--s2)">Guardar canales</button><p class="msg" id="msg-notif" role="status"></p></form>
+      </div>
+
+      <!-- Personas: HU-06 -->
+      <div role="tabpanel" id="p-personas" aria-labelledby="tab-personas" hidden>
+        <div class="grid-panel">
+          <div class="tarjeta"><h3>Personas vinculadas</h3><ul class="lista" id="lista-personas"><li><span><svg class="ic" aria-hidden="true"><use href="#i-usuario"/></svg> Carlos López · Vínculo activo</span></li></ul>
+            <form id="form-vinculo" novalidate style="margin-top:var(--s2)"><div class="campo"><label for="codigo">Código de vinculación</label>
+              <input id="codigo" placeholder="Ej. NS-482916" aria-describedby="e-codigo"><span class="error" id="e-codigo">El código tiene el formato NS-000000.</span></div>
+              <button class="btn btn-principal" type="submit">Solicitar vinculación</button><p class="msg" id="msg-vinculo" role="status"></p></form></div>
+          <div class="tarjeta"><h3>Contactos de emergencia</h3>
+            <form id="form-contacto" novalidate><div class="campo"><label for="c-nombre">Nombre</label><input id="c-nombre" aria-describedby="e-cnombre"><span class="error" id="e-cnombre">Escribe el nombre del contacto.</span></div>
+              <div class="campo"><label for="c-cel">Celular</label><input id="c-cel" inputmode="numeric" placeholder="987654321" aria-describedby="e-ccel"><span class="error" id="e-ccel">El celular tiene 9 dígitos y empieza con 9.</span></div>
+              <button class="btn btn-principal" type="submit">Agregar contacto</button></form>
+            <p class="msg" id="msg-contacto" role="status"></p><ul class="lista" id="lista-contactos"></ul></div>
+        </div>
+        <div class="tarjeta" style="margin-top:var(--s3)"><h3>Permisos que Carlos autorizó</h3>
+          <div class="interruptor"><label for="perm1">Ubicación y seguimiento</label><span><span class="est"></span> <input type="checkbox" id="perm1" role="switch" checked data-switch></span></div>
+          <div class="interruptor"><label for="perm2">Alertas y zona segura</label><span><span class="est"></span> <input type="checkbox" id="perm2" role="switch" checked data-switch></span></div>
+          <div class="interruptor"><label for="perm3">Preferencias de navegación</label><span><span class="est"></span> <input type="checkbox" id="perm3" role="switch" checked data-switch></span></div>
+          <button class="btn btn-secundario" id="desvincular" style="margin-top:var(--s2);border-color:var(--peligro);color:var(--peligro)">Desvincular</button><p class="msg" id="msg-desv" role="status"></p></div>
+      </div>
+
+      <!-- Configuración: HU-04, HU-05, HU-22, HU-46, HU-47 -->
+      <div role="tabpanel" id="p-config" aria-labelledby="tab-config" hidden>
+        <div class="grid-panel">
+          <form class="tarjeta" id="form-config" novalidate><h3>Alertas y audio espacial</h3>
+            <div class="interruptor"><label for="c-voz">Avisos de voz</label><span><span class="est"></span> <input type="checkbox" id="c-voz" role="switch" checked data-switch></span></div>
+            <div class="interruptor"><label for="c-vib">Vibración</label><span><span class="est"></span> <input type="checkbox" id="c-vib" role="switch" checked data-switch></span></div>
+            <div class="interruptor"><label for="c-ton">Tonos sonoros</label><span><span class="est"></span> <input type="checkbox" id="c-ton" role="switch" data-switch></span></div>
+            <fieldset style="margin-top:var(--s2)"><legend>Sensibilidad de detección</legend><div class="opciones">
+              <label><input type="radio" name="sens" value="Baja"> Baja</label><label><input type="radio" name="sens" value="Media" checked> Media</label><label><input type="radio" name="sens" value="Alta"> Alta</label></div></fieldset>
+            <div class="campo"><label for="c-vol">Volumen: <span id="c-vol-txt">70 %</span></label><input type="range" id="c-vol" min="0" max="100" step="5" value="70"></div>
+            <button class="btn btn-principal" type="submit" style="width:100%">Guardar preferencias</button><p class="msg" id="msg-config" role="status"></p></form>
+          <div>
+            <div class="tarjeta" style="margin-bottom:var(--s3)"><h3>Aviso de llegada</h3>
+              <div class="interruptor"><label for="llegada">Notificación de voz al llegar</label><span><span class="est"></span> <input type="checkbox" id="llegada" role="switch" checked data-switch></span></div>
+              <p class="apoyo" id="llegada-txt">Mensaje: «Has llegado a los alrededores de tu destino. Busca el acceso principal.»</p></div>
+            <div class="tarjeta" style="margin-bottom:var(--s3)"><h3>Respaldo en la nube</h3>
+              <div class="interruptor"><label for="nube">Respaldo automático</label><span><span class="est"></span> <input type="checkbox" id="nube" role="switch" checked data-switch></span></div>
+              <p class="apoyo" id="nube-txt"></p></div>
+            <div class="tarjeta"><h3>Sensores y brújula</h3><p>La calibración se hace en el celular de Carlos. Puedes enviarle la guía.</p>
+              <button class="btn btn-secundario" id="enviar-guia">Enviar guía al móvil</button><p class="msg" id="msg-guia" role="status"></p></div>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+      <div class="app-pie" id="app-pie">Panel cuidador · Web · HU-03</div>
+    </div>
+  </div>
+</section>
+
+<section class="seccion" id="privacidad" aria-labelledby="t-priv">
+  <div class="contenedor">
+    <h2 id="t-priv">Tus datos, bajo tu control</h2>
+    <div class="grid grid-3">
+      <div class="tarjeta"><h3>Con tu permiso</h3><p>La ubicación se comparte solo con quien tú autorices.</p></div>
+      <div class="tarjeta"><h3>Puedes retirarlo</h3><p>Quita permisos o desvincula a una persona cuando quieras.</p></div>
+      <div class="tarjeta"><h3>Sesión segura</h3><p>Al cerrar sesión se borran los datos locales de ubicación.</p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="pie"><div class="contenedor">
+  <p class="apoyo">NaviSense · Proyecto de HCI for UX Design (1ASI0784), UPC 2026-20. Es una herramienta de apoyo y no reemplaza al bastón blanco ni al perro guía.</p>
+</div></footer>
+<script src="../js/main.js"></script>
+</body>
+</html>
